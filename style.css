@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    --main-bg-color: #e07a5f;
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10em;
+    background-color: var(--main-bg-color);
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: min(95%,50rem);
+    min-height: 50vh;
+
+}
+
+
+.block.vertical-border{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.block:nth-child(-n+6){
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
