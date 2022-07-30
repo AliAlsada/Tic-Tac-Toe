@@ -1,38 +1,156 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
 
-:root{
-    --main-bg-color: #e07a5f;
+:root {
+    --main-bg-color: #edf2f4;
+    --board-color: #553d67;
+    --black-color: #000000;
 }
 
-
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 10em;
+body {
     background-color: var(--main-bg-color);
 }
 
-.board{
+.game-name {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 3em;
+    border-radius: 20px;
+    /* background-color: var(--board-color); */
+}
+
+.board {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: min(95%,50rem);
-    min-height: 50vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 7px;
+    width: 600px;
+    height: 600px;
+}
 
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+ 
+}
+
+.block:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
 
-.block.vertical-border{
-    border-right: 1px solid rgb(0, 0, 0);
+/* main page */
+
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em;
 }
 
-.block:nth-child(-n+6){
-    border-bottom: 1px solid rgb(0, 0, 0);
+.player{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--black-color);
+    border-radius: 6px;
+    padding: 0.1em;
 }
 
+.mark{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+.choose-player{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5em 0 0.1em 0;
+}
+
+.human, .bot{
+    font-size: 1rem;
+    width: 50%;
+}
+
+.vs-text{
+    font: 2rem 'Open Sans', sans-serif;
+    margin: 1em;
+}
+
+.start{
+    text-align: center;
+}
+
+.start-game{
+    font-size: 1.5rem;
+    padding: 0.2em 1em;
+    border: solid black;
+    border-radius: 5px;
+}
+
+
+/* CSS */
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 600;
+  margin: 0.5em;
+  padding: 0.3em 0.5em;
+  text-align: center;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
