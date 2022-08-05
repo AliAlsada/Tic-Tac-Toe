@@ -12,29 +12,69 @@
 
 <body>
 
-    <div class="game-name">
-        <h1>Tic Tac Toe</h1>
+    <div class="main-page active">
+        <div class="game-name">
+            <h1>Tic Tac Toe</h1>
+        </div>
+    
+        <div class="main-section active">
+    
+            <div class="player 1">
+                <p class="mark x">X</p>
+                <img src="/images/man.jpg" alt="" class="img-of-x">
+                <div class="choose-player">
+                    <button class="human player-one">Player</button>
+                    <button class="bot player-one">Bot</button>
+                </div>
+            </div>
+    
+            <h3 class="vs-text"> Vs </h3>
+    
+    
+            <div class="player 2">
+                <p class="mark o">O</p>
+                <img src="/images/robot.png" alt="" class="img-of-y">
+                <div class="choose-player">
+                    <button class="human player-two">Player</button>
+                    <button class="bot player-two">Bot</button>
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        <div class="start">
+            <button class="start-game">Start The Game</button>
+        </div>
+
     </div>
 
 
 
-    <div class="container">
-        <div class="board">
-            <div id="1" class="block vertical-border"></div>
-            <div id="2" class="block vertical-border"></div>
-            <div id="3" class="block"></div>
-            <div id="4" class="block vertical-border"></div>
-            <div id="5" class="block vertical-border"></div>
-            <div id="6" class="block"></div>
-            <div id="7" class="block vertical-border"></div>
-            <div id="8" class="block vertical-border"></div>
-            <div id="9" class="block no-bottom"></div>
+    <div class="game-play">
+        <div class="game-name">
+            <h1>Tic Tac Toe</h1>
+        </div>
+    
+        <div class="container">
+            <div class="board">
+                <div id="1" class="block vertical-border"></div>
+                <div id="2" class="block vertical-border"></div>
+                <div id="3" class="block"></div>
+                <div id="4" class="block vertical-border"></div>
+                <div id="5" class="block vertical-border"></div>
+                <div id="6" class="block"></div>
+                <div id="7" class="block vertical-border"></div>
+                <div id="8" class="block vertical-border"></div>
+                <div id="9" class="block no-bottom"></div>
+            </div>
         </div>
     </div>
 
 
 
-    <script src="/script.js"></script>
+
+    <script src="/script.js" defer></script>
 </body>
 
 </html>

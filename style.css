@@ -14,6 +14,14 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.game-play{
+    opacity: 0;
+}
+
+.game-play.active{
+    opacity: 1;
+}
+
 .game-name {
     text-align: center;
     margin-top: 3em;
@@ -53,6 +61,7 @@ body {
     background-color: #fff;
     font-size: 2.5rem;
     font-family: 'Open Sans', sans-serif;
+    z-index: 1;
  
 }
 
@@ -61,8 +70,28 @@ body {
     transform: translateY(-2px);
 }
 
+.block:active {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
 
 /* main page */
+.main-page{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+}
+
+.main-page.active{
+    
+    opacity: 1;
+}
 
 .main-section{
     display: flex;
@@ -150,7 +179,11 @@ button:hover {
   transform: translateY(-2px);
 }
 
-button:active {
-  box-shadow: none;
-  transform: translateY(0);
+
+.human.active, .bot.active{
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: none;
+    transform: translateY(0);;
 }
+
