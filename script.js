@@ -97,9 +97,9 @@ const gameBoard = () => {
                 && gameBoardArray[winConditions[i][1]] === "O" 
                 && gameBoardArray[winConditions[i][2]] === "O"){ 
 
-                    fields[winConditions[i][0]].classList.add("winner");
-                    fields[winConditions[i][1]].classList.add("winner");
-                    fields[winConditions[i][2]].classList.add("winner");
+                    fields[winConditions[i][0]].classList.add("loser");
+                    fields[winConditions[i][1]].classList.add("loser");
+                    fields[winConditions[i][2]].classList.add("loser");
                     return -10;   
             }
             
